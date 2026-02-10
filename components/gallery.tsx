@@ -1,53 +1,21 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import Image from 'next/image'
 import { Search } from 'lucide-react'
 
 interface Comic {
   id: number
   title: string
   category: string
-  image: string
   year: number
 }
 
 const COMICS_DATA: Comic[] = [
-  {
-    id: 1,
-    title: 'Yaksha Nexus',
-    category: 'Sci-Fi',
-    image: '/comics/yaksha-nexus.jpg',
-    year: 2024,
-  },
-  {
-    id: 2,
-    title: 'Kathakali Avengers',
-    category: 'Action',
-    image: '/comics/kathakali-avengers.jpg',
-    year: 2024,
-  },
-  {
-    id: 3,
-    title: 'Theyyam Protocol',
-    category: 'Thriller',
-    image: '/comics/theyyam-protocol.jpg',
-    year: 2023,
-  },
-  {
-    id: 4,
-    title: 'Spice Route Chronicles',
-    category: 'Adventure',
-    image: '/comics/spice-route-chronicles.jpg',
-    year: 2023,
-  },
-  {
-    id: 5,
-    title: 'Monsoon Guardians',
-    category: 'Fantasy',
-    image: '/comics/monsoon-guardians.jpg',
-    year: 2024,
-  },
+  { id: 1, title: 'Yaksha Nexus', category: 'Sci-Fi', year: 2024 },
+  { id: 2, title: 'Kathakali Avengers', category: 'Action', year: 2024 },
+  { id: 3, title: 'Theyyam Protocol', category: 'Thriller', year: 2023 },
+  { id: 4, title: 'Spice Route Chronicles', category: 'Adventure', year: 2023 },
+  { id: 5, title: 'Monsoon Guardians', category: 'Fantasy', year: 2024 },
 ]
 
 const CATEGORIES = ['All', ...new Set(COMICS_DATA.map(c => c.category))]
@@ -117,14 +85,16 @@ export default function Gallery() {
               key={comic.id}
               className="group relative overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105"
             >
-              <div className="relative h-80 w-full overflow-hidden bg-gradient-to-br from-primary to-accent">
-                <Image
-                  src={comic.image || "/placeholder.svg"}
-                  alt={comic.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+              <div className="relative flex h-80 w-full flex-col items-center justify-center gap-3 overflow-hidden bg-gradient-to-br from-primary to-accent p-6">
+                <span className="text-4xl font-bold text-primary-foreground/20">
+                  {comic.title.split(' ').map(w => w[0]).join('')}
+                </span>
+                <span className="text-sm font-semibold text-primary-foreground/60 text-center">
+                  {comic.title}
+                </span>
+                <span className="rounded-full bg-primary-foreground/10 px-3 py-1 text-xs text-primary-foreground/50">
+                  {comic.category} &middot; {comic.year}
+                </span>
               </div>
             </div>
           ))}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import { BookOpen, Palette, Users, Sparkles } from "lucide-react"
 
@@ -65,14 +64,7 @@ export default function AboutPage() {
   return (
     <main className="bg-background text-foreground">
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-end overflow-hidden">
-        <Image
-          src="/about-hero.jpg"
-          alt="Kathakali performer blending tradition with modern neon aesthetics"
-          fill
-          className="object-cover"
-          priority
-        />
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-gradient-dark-navy">
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-40">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent-foreground">
