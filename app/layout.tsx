@@ -1,3 +1,4 @@
+import React from "react"
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
@@ -7,8 +8,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Inverse | Pop Culture × Kerala Traditions Comics',
+  description: 'Original comics blending pop culture with Kerala traditional characters. Crafted by passionate creators with authentic storytelling and art.',
   generator: 'v0.app',
   icons: {
     icon: [
