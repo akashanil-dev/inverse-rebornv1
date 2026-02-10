@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
@@ -5,38 +7,44 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/0 via-primary/10 to-accent/20 pointer-events-none" />
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 py-20">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pt-28 pb-20">
         {/* Main heading with gradient effect */}
         <div className="mb-8">
-          <h1 className="text-7xl md:text-8xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-7xl md:text-8xl font-bold text-primary-foreground mb-6 leading-tight">
             INVERSE
           </h1>
           <div className="h-1 w-24 bg-gradient-to-r from-accent to-secondary mx-auto mb-8" />
         </div>
 
         {/* Subheading */}
-        <p className="text-2xl md:text-3xl font-light text-white/90 mb-8 leading-relaxed">
+        <p className="text-2xl md:text-3xl font-light text-primary-foreground/90 mb-8 leading-relaxed">
           Pop Culture Meets Kerala Tradition
         </p>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-          Original comics crafted by passionate creators blending contemporary pop culture with the rich heritage of Kerala traditions. Every story, every illustration—authentically ours.
+        <p className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+          Original comics crafted by passionate creators blending contemporary pop culture with the rich heritage of Kerala traditions. Every story, every illustration — authentically ours.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button className="px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+          <Link
+            href="#gallery"
+            className="px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/90 transition-all duration-300"
+          >
             Explore Comics
-          </button>
-          <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+          </Link>
+          <Link
+            href="/about"
+            className="px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground font-semibold rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
+          >
             Our Story
-          </button>
+          </Link>
         </div>
 
         {/* Scroll indicator */}
         <div className="animate-bounce">
-          <svg className="w-6 h-6 mx-auto text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 mx-auto text-primary-foreground/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
