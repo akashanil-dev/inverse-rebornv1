@@ -115,7 +115,7 @@ export default function Gallery() {
           {filteredComics.map(comic => (
             <div
               key={comic.id}
-              className="group overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105"
+              className="group relative overflow-hidden rounded-lg shadow-lg transition-transform hover:scale-105"
             >
               <div className="relative h-80 w-full overflow-hidden bg-gradient-to-br from-primary to-accent">
                 <Image
