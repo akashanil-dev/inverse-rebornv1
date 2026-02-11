@@ -28,7 +28,7 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <button className="px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+          <button className="px-8 py-4 bg-accent text-secondary font-semibold rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105">
             Explore Comics
           </button>
           <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">

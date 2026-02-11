@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Search } from 'lucide-react'
 
 interface Comic {
-  id: string
+  id: number
   title: string
   category: string
   image: string
