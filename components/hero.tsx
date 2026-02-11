@@ -1,3 +1,5 @@
+'use client'
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
